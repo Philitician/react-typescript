@@ -3,12 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const x = 20
-
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" />
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
