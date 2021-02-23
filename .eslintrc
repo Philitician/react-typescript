@@ -1,3 +1,4 @@
+// .eslintrc
 {
     "plugins": ["prettier", "@typescript-eslint"],
     "extends": ["airbnb-typescript", "react-app", "prettier"],
@@ -13,17 +14,10 @@
       }
     },
     "rules": {
+      "no-unused-vars": 0,
+      "no-shadow": 0,
+      "@typescript-eslint/no-shadow": 0,
       "object-curly-spacing": ["warn", "always"],
-      "no-unused-vars": [
-        "warn",
-        {
-          "vars": "all",
-          "args": "none"
-        }
-      ],
-      "@typescript-eslint/semi": [
-        "off"
-      ],
       "@typescript-eslint/no-unused-vars": [
         "warn",
         {
@@ -72,6 +66,13 @@
       "react/no-unescaped-entities": "off",
       "react/jsx-one-expression-per-line": "off",
       "react/jsx-wrap-multilines": "off",
-      "react/destructuring-assignment": "off"
+      "react/destructuring-assignment": "off",
+      "@typescript-eslint/comma-dangle": ["error", {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "never"
+      }]
     }
   }

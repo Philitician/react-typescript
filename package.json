@@ -1,5 +1,5 @@
 {
-  "name": "react-typescript",
+  "name": "formatting-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "axios": "^0.21.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
@@ -21,9 +22,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "json-server": "json-server --watch fakeapi.json --port 9000",
+    "dev": "concurrently \"yarn start\" \"yarn json-server\"",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
-    "isready": "npm run format && npm run lint && npm run build"
+    "isready": "yarn run format && yarn run lint && yarn run build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,22 +47,22 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
-    "@typescript-eslint/parser": "^4.15.1",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
     "babel-eslint": "^10.1.0",
+    "concurrently": "^6.0.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^8.0.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-flowtype": "^5.2.2",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.1.5",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-webpack-plugin": "^2.5.2",
-    "prettier": "^2.2.1",
+    "json-server": "^0.16.3",
     "prettier-eslint": "^12.0.0",
     "prettier-eslint-cli": "^5.0.0"
   }
